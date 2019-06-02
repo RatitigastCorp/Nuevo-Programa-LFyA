@@ -3,11 +3,16 @@ var num_NT=0;
 var ls_NT1=[num_NT];
 var x = document.getElementById("myTextarea").value;
 var n = x.indexOf("[");
-
+/*indexOf es una funcion que buscará en toda la cadena el símbolo [.
+Si en alguna parte de la cadena existe el símbolo, regresará la posición
+en donde se encontró.
+En caso de que no exista, regresará el valor de -1*/
 if (n==-1){var error = "Falta indicador"; document.getElementById("demo").innerHTML = error;}
-else {var res = x.substr(n+1);
-    m =  res.indexOf("]",1)
-    if (m !=-1){
+else {var res = x.substr(n+1);/*La funcion substr extrae todos los caracteres a partir de la posición
+  que se indique, en este caso después de que encuentra el caracter [*/
+    m =  res.indexOf("]",1) /*Se verifica que existan los ]*/
+    if (m !=-1){ /*En caso de que existan procedemos a identificar
+      unicamente los simbolos no terminales generadores*/
     var i=0;
     var character='';
     while (i <= res.length){
