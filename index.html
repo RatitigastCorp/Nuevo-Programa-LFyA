@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+  <head>
+    <title>formDemo.html</title>
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+    <script type="text/javascript" src="detectaNT.js"></script>
+    <h1>Form Demo</h1>
+    <form>
+      <fieldset>
+        <legend>Text input</legend>
+        <p>
+          <label>Ingresa tu gramática</label>
+          <textarea id="myTextarea"
+                  rows = "3"
+                  cols = "80">[A] ::= aA| bA| cA| dA
+[B] ::= aA| bA| cA| dA
+</textarea>
+        </p>
+        <p>Da click para observar los elementos de tu gramática</p>
+
+<button type="button" onclick="detectaNT()">Try it</button>
+<p id="demo"></p>
+<p id="demo2"></p>
+      </fieldset>
+    </form>
+  </body>
+</html>
