@@ -6,6 +6,7 @@
   </head>
   <body>
     <script type="text/javascript" src="detectaNT.js"></script>
+    <script type="text/javascript" src="detectaP.js"></script>
     <h1>Form Demo</h1>
     <form>
       <fieldset>
@@ -14,15 +15,18 @@
           <label>Ingresa tu gramática</label>
           <textarea id="myTextarea"
                   rows = "3"
-                  cols = "80">[A] ::= aA| bA| cA| dA
-[B] ::= aA| bA| cA| dA
+                  cols = "80">[A]::=aA|bA|cA|dA
+[B]::=aD|bE|cF|dG
+[C]::=aa|E|F|d
+[D]::=a|F|d
 </textarea>
         </p>
         <p>Da click para observar los elementos de tu gramática</p>
 
-<button type="button" onclick="detectaNT()">Try it</button>
+<button type="button" onclick="detectaNT();detectaP();">Try it</button>
 <p id="demo"></p>
 <p id="demo2"></p>
+<p id="demo3"></p>
       </fieldset>
     </form>
   </body>
