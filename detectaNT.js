@@ -1,6 +1,7 @@
 function detectaNT() {
 var num_NT=0;
 var ls_NT1=[num_NT];
+this.ls_NT1=ls_NT1;
 var x = document.getElementById("myTextarea").value;
 var n = x.indexOf("[");
 /*indexOf es una funcion que buscará en toda la cadena el símbolo [.
@@ -22,7 +23,7 @@ else {var res = x.substr(n+1);/*La funcion substr extrae todos los caracteres a 
               ls_NT1[num_NT]=character;
               num_NT++;
           }
-          if (character == character.toLowerCase() && res.charAt(i-1)== "["&& res.charAt(i+1)== "]"){
+          if (character == character.toLowerCase() && res.charAt(i-1)== "[" && res.charAt(i+1)== "]"){
               var error1 = "Los símbolos no terminales deben ser mayúsculas"; document.getElementById("demo").innerHTML = error1;
           }
                 i++;
@@ -31,4 +32,5 @@ else {var res = x.substr(n+1);/*La funcion substr extrae todos los caracteres a 
     if (m==-1){var error2 = "Falta cerrar corchetes"; document.getElementById("demo").innerHTML = error2;}
     }
     document.getElementById("demo2").innerHTML = ls_NT1;
+    return ls_NT1;
 }
