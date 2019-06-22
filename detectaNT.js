@@ -31,6 +31,6 @@ else {var res = x.substr(n+1);/*La funcion substr extrae todos los caracteres a 
     }
     if (m==-1){var error2 = "Falta cerrar corchetes"; document.getElementById("demo").innerHTML = error2;}
     }
-    document.getElementById("demo2").innerHTML = ls_NT1;
+    document.getElementById("demo").innerHTML = "Lista de No Terminales de tu gramática: " + ls_NT1;
     return ls_NT1;
 }
